@@ -27,6 +27,28 @@ app.get('/test',(req,res) => {
 app.get('/',(req,res) => {
     results = [];
     resultsSoon = [];
+
+        // https://intrabettv.com/ekkanal.json
+    axios.get('https://intrabettv.com/ekkanal.json')
+    .then((res)=>{
+        if(res && res.data && res.data.length > 0)
+        {
+           
+            res.data.map(item => {
+                results.push({
+                    homeName: item['homeName'] ? item['homeName'] : null,
+                    homeLogo: item['homeLogo'] ?  item['homeLogo'] : null,
+                    awayName: item['awayName'] ? item['awayName'] : null,
+                    awayLogo: item['awayLogo'] ? item['awayLogo'] : null,
+                    type: item['type'] ? item['type'] : null,
+                    category: item['category'] ? item['category'] : null,
+                    time: item['time'] ? item['time'] : null,
+                    streamId: item['streamId'] ?  item['streamId'] : null
+                });
+            });
+        }
+    });
+
     axios.get("https://tbcof.com/url.json").then(function (getUrl) {
         axios.get(getUrl.data.url + '/LiveFeed/Get1x2_VZip?count=250&lng=tr&mode=4&country=190&partner=7')
           .then(function (response) {
@@ -87,3 +109,6 @@ app.get('/',(req,res) => {
 app.listen(port,() => {
     console.log('started');
 })
+
+
+ 
