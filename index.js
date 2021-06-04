@@ -63,7 +63,7 @@ app.get('/',(req,res) => {
                             type: item['SN'] ? item['SN'] : null,
                             category: item['L'] ? item['L'] : null,
                             time: item['S'] ? item['S'] : null,
-                            streamId: item['VI'] ? 'https://edge5.xmediaget.com/hls-live/xmlive/_definst_/' + item['VI'] +'/'+ item['VI'] +'.m3u8?whence=2'  : null
+                            streamId: item['VI'] ? 'https://edge10.xmediaget.com/hls-live/xmlive/_definst_/' + item['VI'] +'/'+ item['VI'] +'.m3u8?whence=2'  : null
                         });
                     }
                 });
@@ -80,7 +80,7 @@ app.get('/',(req,res) => {
                             type: match['SN'] ? match['SN'] : null,
                             category: match['L'] ? match['L'] : null,
                             time: match['S'] ? match['S'] : null,
-                            streamId: match['VI'] ? 'https://edge5.xmediaget.com/hls-live/xmlive/_definst_/' + match['VI'] +'/'+ match['VI'] +'.m3u8?whence=2'  : null
+                            streamId: match['VI'] ? 'https://edge10.xmediaget.com/hls-live/xmlive/_definst_/' + match['VI'] +'/'+ match['VI'] +'.m3u8?whence=2'  : null
                         });
                     });
                 }
