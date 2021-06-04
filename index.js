@@ -63,7 +63,7 @@ app.get('/',(req,res) => {
                             type: item['SN'] ? item['SN'] : null,
                             category: item['L'] ? item['L'] : null,
                             time: item['S'] ? item['S'] : null,
-                            streamId: item['VI'] ? 'https://edge10.xmediaget.com/hls-live/xmlive/' + item['VI'] +'/1/mediaplaylist.m3u8'  : null
+                            streamId: item['VI'] ? 'https://edge10.xmediaget.com/hls-live/xmlive/' + item['VI'] +'/1/mediaplaylist.m3u8?s=b98db937442f28419d456024bbd95f481cae57def62622c8cd270b2ce5c701ba&t=1622799095421&ai=3&av=1064&ui=0'  : null
                         });
                     }
                 });
@@ -80,7 +80,7 @@ app.get('/',(req,res) => {
                             type: match['SN'] ? match['SN'] : null,
                             category: match['L'] ? match['L'] : null,
                             time: match['S'] ? match['S'] : null,
-                            streamId: match['VI'] ? 'https://edge10.xmediaget.com/hls-live/xmlive/' + match['VI'] +'/1/mediaplaylist.m3u8'  : null                   
+                            streamId: match['VI'] ? 'https://edge10.xmediaget.com/hls-live/xmlive/' + match['VI'] +'/1/mediaplaylist.m3u8?s=b98db937442f28419d456024bbd95f481cae57def62622c8cd270b2ce5c701ba&t=1622799095421&ai=3&av=1064&ui=0'  : null                   
                         });
                     });
                 }
